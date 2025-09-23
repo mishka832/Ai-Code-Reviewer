@@ -22,7 +22,7 @@ const Home = () => {
     try {
       // Replace the mock call with actual API call
       const response = await fetch(
-        "https://ai-code-reviewer-b24p.onrender.com",
+        "https://ai-code-reviewer-b24p.onrender.com/review",
         {
           method: "POST",
           headers: {
