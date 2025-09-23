@@ -1,0 +1,129 @@
+/* AI Code Reviewer Design System */
+
+/* Root variables */
+@import "tailwindcss";
+:root {
+  /* Dark theme base */
+  --background: 222 47% 4%;
+  --foreground: 210 40% 95%;
+
+  --card: 222 47% 6%;
+  --card-foreground: 210 40% 95%;
+
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 47% 4%;
+
+  --muted: 222 47% 8%;
+  --muted-foreground: 215 20% 65%;
+
+  --accent: 217 91% 60%;
+  --accent-foreground: 222 47% 4%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 222 47% 12%;
+  --input: 222 47% 8%;
+  --ring: 217 91% 60%;
+  --radius: 0.75rem;
+
+  /* Code Editor */
+  --code-bg: 222 47% 5%;
+  --code-border: 222 47% 15%;
+  --success: 142 76% 36%;
+  --warning: 38 92% 50%;
+  --error: 0 84% 60%;
+}
+
+/* Dark mode overrides */
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --border: 217.2 32.6% 17.5%;
+}
+
+/* Global styles */
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: "Fira Code", "Cascadia Code", "SF Mono", Consolas, monospace;
+  margin: 0;
+  padding: 0;
+}
+
+/* Card styling */
+.card {
+  background: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px -8px hsl(222 100% 0% / 0.4);
+  padding: 1rem;
+}
+
+/* Code Editor */
+.code-editor {
+  background: hsl(var(--code-bg));
+  border: 1px solid hsl(var(--code-border));
+  font-family: "Fira Code", monospace;
+  font-size: 0.875rem;
+  resize: none;
+  min-height: 400px;
+  color: hsl(var(--foreground));
+}
+
+/* Scrollbar for code editor */
+.code-editor::-webkit-scrollbar {
+  width: 8px;
+}
+
+.code-editor::-webkit-scrollbar-track {
+  background: hsl(var(--code-bg));
+}
+
+.code-editor::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+
+.code-editor::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent));
+}
+
+/* Badge styling */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Button styling */
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Feedback box */
+.feedback-item {
+  background: hsl(var(--muted) / 0.3);
+  border: 1px solid hsl(var(--border) / 0.5);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+}
