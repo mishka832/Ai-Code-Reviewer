@@ -21,15 +21,18 @@ const Home = () => {
 
     try {
       // Replace the mock call with actual API call
-      const response = await fetch("http://localhost:3000/review", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // If your API requires an API key, add it here:
-          // "Authorization": `Bearer ${process.env.REACT_APP_API_KEY}`
-        },
-        body: JSON.stringify({ code }),
-      });
+      const response = await fetch(
+        "https://ai-code-reviewer-b24p.onrender.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            // If your API requires an API key, add it here:
+            // "Authorization": `Bearer ${process.env.REACT_APP_API_KEY}`
+          },
+          body: JSON.stringify({ code }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to review code");
