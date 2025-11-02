@@ -44,3 +44,8 @@ This project serves as an AI-powered assistant for developers to receive automat
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/mishka832/AI-Code-Reviewer.git
+```
+### 2. Install Dependencies
+### 3. Configure Environment Variables and add your OPEN AI KEY.
+### 4. npm run dev
+
